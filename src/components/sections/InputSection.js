@@ -1,9 +1,17 @@
 import { Component } from 'react';
-import EducationForm from './forms/EducationForm';
-import ExperienceForm from './forms/ExperienceForm';
-import PersonalInfoForm from './forms/PersonalInfoForm';
+import EducationForm from '../forms/EducationForm';
+import ExperienceForm from '../forms/ExperienceForm';
+import PersonalInfoForm from '../forms/PersonalInfoForm';
 
 class InputSection extends Component {
+
+  constructor(props) {
+    super(props);
+  }
+
+  setInfo = (propName, newValue) => {
+    this.props.setInfo(propName, newValue)
+  }
 
   handleOnSubmit = (e) => {
     e.preventDefault();
@@ -14,7 +22,7 @@ class InputSection extends Component {
     return (
       <section className='section-input'>
         <form onSubmit={this.handleOnSubmit} className='input-form'>
-          <PersonalInfoForm />
+          <PersonalInfoForm setInfo={this.setInfo} />
           <ExperienceForm />
           <EducationForm />
         </form>

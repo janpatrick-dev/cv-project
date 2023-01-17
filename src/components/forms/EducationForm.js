@@ -1,6 +1,5 @@
 import { Component } from 'react';
 import Input from './form-inputs/Input';
-import TextArea from './form-inputs/TextArea';
 
 class EducationForm extends Component {
   

@@ -11,6 +11,7 @@ class Input extends Component {
   }
 
   handleOnTextChange = (e) => {
+    this.props.onChange(e);
     this.setState({
       value: e.target.value
     });
