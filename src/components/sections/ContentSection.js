@@ -30,10 +30,17 @@ class ContentSection extends Component {
     })
   }
   
+  setDefaultInfo = () => {
+    this.setState(Example);
+  }
+  
   render() {
     return (
       <section className='section-content'>
-        <InputSection setInfo={this.setInfo} info={this.state} />
+        <InputSection 
+          setInfo={this.setInfo} 
+          setDefaultInfo={this.setDefaultInfo} 
+          info={this.state} />
         <DisplaySection info={this.state} />
       </section>
     );

@@ -2,6 +2,9 @@
   --color-primary-very-dark-blue: #474E68;
   --color-primary-dark-blue: #404258;
 
+  --color-primary-very-light-blue: #6B728E;
+  --color-primary-light-blue: #50577A;
+
   --color-white: #FFFFFF;
 }
 
@@ -35,6 +38,10 @@ h1 {
   background-color: var(--color-primary-very-dark-blue);
   color: var(--color-white);
   font-size: 3rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .section-content {
@@ -52,6 +59,21 @@ h1 {
   flex-basis: 40%;
   padding: 20px;
   background-color: var(--color-white);
+}
+
+.section-input .load-example-btn {
+  padding: 1rem 2rem;
+  color: white;
+  background-color: var(--color-primary-light-blue);
+  border-radius: 20px;
+  cursor: pointer;
+
+  border: none;
+  outline: none;
+}
+
+.section-input .load-example-btn:hover {
+  background-color: var(--color-primary-very-light-blue);
 }
 
 .section-input .input-form {

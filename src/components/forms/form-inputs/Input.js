@@ -4,9 +4,8 @@ class Input extends Component {
 
   constructor(props) {
     super(props);
-    const { defaultValue } = this.props;
     this.state = {
-      value: defaultValue ? defaultValue : ''
+      value: ''
     };
   }
 
@@ -18,14 +17,14 @@ class Input extends Component {
   }
 
   render() {
-    const { type, placeholder } = this.props;
+    const { type, placeholder, defaultValue } = this.props;
 
     return (
       <input 
         type={type} 
         placeholder={placeholder} 
         onChange={this.handleOnTextChange}
-        value={this.state.value} 
+        value={defaultValue ? defaultValue : this.state.value} 
         className='input' />
     );
   }

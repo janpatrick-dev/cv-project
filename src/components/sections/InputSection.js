@@ -12,16 +12,16 @@ class InputSection extends Component {
   setInfo = (propName, newValue) => {
     this.props.setInfo(propName, newValue)
   }
-
-  handleOnSubmit = (e) => {
-    e.preventDefault();
+  
+  setDefaultInfo = () => {
+    this.props.setDefaultInfo();
   }
   
   render() {
-
     return (
       <section className='section-input'>
-        <form onSubmit={this.handleOnSubmit} className='input-form'>
+        <form className='input-form'>
+          <button type='button' className='load-example-btn' onClick={this.setDefaultInfo}>Load Example</button>
           <PersonalInfoForm setInfo={this.setInfo} info={this.props.info} />
           <ExperienceForm />
           <EducationForm />
