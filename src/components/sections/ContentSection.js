@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import DisplaySection from './DisplaySection';
 import InputSection from './InputSection';
+import Example from '../../Example';
 
 class ContentSection extends Component {
 
@@ -19,6 +20,7 @@ class ContentSection extends Component {
       experiences: [],
       educations: []
     }
+    // this.state = Example;
   }
 
   setInfo = (propName, newValue) => {
@@ -31,7 +33,7 @@ class ContentSection extends Component {
   render() {
     return (
       <section className='section-content'>
-        <InputSection setInfo={this.setInfo} />
+        <InputSection setInfo={this.setInfo} info={this.state} />
         <DisplaySection info={this.state} />
       </section>
     );

@@ -11,8 +11,8 @@ class ExperienceForm extends Component {
         <div className='input-container'>
           <Input type='text' placeholder='Job Title' />
           <Input type='text' placeholder='Company Name' />
-          <Input type='number' placeholder='Start Year' defaultValue='1950' />
-          <Input type='number' placeholder='End Year' defaultValue={new Date().getFullYear()} />
+          <Input type='number' placeholder='Start Year' />
+          <Input type='number' placeholder='End Year' />
           <TextArea rows='5' placeholder='Describe your work...' /> 
         </div>
       </section>

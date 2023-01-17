@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import ProfessionalHeaderSection from './ProfessionalHeaderSection';
+import WorkHeaderSection from './WorkHeaderSection';
 import WorkExperienceSection from './WorkExperienceSection';
 import WorkProfileSection from './WorkProfileSection';
 
@@ -12,7 +12,7 @@ class WorkSection extends Component {
     const { firstName, lastName, jobTitle } = this.props.info;
     return (
       <section className='section-display-professional'>
-        <ProfessionalHeaderSection 
+        <WorkHeaderSection 
           firstName={firstName}
           lastName={lastName} 
           jobTitle={jobTitle} />

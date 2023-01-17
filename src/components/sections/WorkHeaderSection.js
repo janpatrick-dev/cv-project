@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-class ProfessionalHeaderSection extends Component {
+class WorkHeaderSection extends Component {
 
   constructor(props) {
     super(props);
@@ -20,4 +20,4 @@ class ProfessionalHeaderSection extends Component {
   }
 }
 
-export default ProfessionalHeaderSection;
+export default WorkHeaderSection;

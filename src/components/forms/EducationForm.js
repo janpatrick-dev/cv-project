@@ -10,8 +10,8 @@ class EducationForm extends Component {
         <div className='input-container'>
           <Input type='text' placeholder='Degree Title' />
           <Input type='text' placeholder='School Name' />
-          <Input type='number' placeholder='Start Year' defaultValue='1950' />
-          <Input type='number' placeholder='End Year' defaultValue={new Date().getFullYear()} />
+          <Input type='number' placeholder='Start Year' />
+          <Input type='number' placeholder='End Year' />
         </div>
       </section>
     );

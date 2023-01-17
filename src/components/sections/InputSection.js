@@ -22,7 +22,7 @@ class InputSection extends Component {
     return (
       <section className='section-input'>
         <form onSubmit={this.handleOnSubmit} className='input-form'>
-          <PersonalInfoForm setInfo={this.setInfo} />
+          <PersonalInfoForm setInfo={this.setInfo} info={this.props.info} />
           <ExperienceForm />
           <EducationForm />
         </form>
