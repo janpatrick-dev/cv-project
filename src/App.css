@@ -19,11 +19,11 @@ html {
 
 body {
   box-sizing: inherit;
+  background-color: var(--color-primary-dark-blue);
 }
 
 .App {
   height: 100vh;
-  background-color: var(--color-primary-dark-blue);
 }
 
 .section-header {
@@ -35,15 +35,49 @@ body {
 
 .section-content {
   margin: 2rem 5rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
   gap: 20px;
 }
 
 .section-input {
+  flex-basis: 40%;
+  padding: 20px;
   background-color: var(--color-white);
 }
 
+.section-input .input-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-input .input-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px
+}
+
+.section-input .input,
+.section-input .textarea {
+  padding: 1rem;
+}
+
+.section-input .textarea {
+  resize: none;
+  grid-column: 1 / -1;
+}
+
+[class^=section-input-] {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .section-display {
+  min-width: 210mm;
+  min-height: 297mm;
   background-color: var(--color-white);
 }
