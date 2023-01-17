@@ -9,7 +9,7 @@ class WorkSection extends Component {
   }
   
   render() {
-    const { firstName, lastName, jobTitle } = this.props.info;
+    const { firstName, lastName, jobTitle, introduction } = this.props.info;
     return (
       <section className='section-display-professional'>
         <WorkHeaderSection 
@@ -17,11 +17,7 @@ class WorkSection extends Component {
           lastName={lastName} 
           jobTitle={jobTitle} />
         <WorkProfileSection
-          profileDescription='
-            Adipisicing sit velit nostrud labore laboris. 
-            Sunt labore proident consequat do consectetur. 
-            Ex duis eiusmod est reprehenderit amet mollit velit culpa. 
-            Quis consectetur dolor deserunt laboris minim deserunt consectetur culpa ex.' />
+          introduction={introduction} />
         <WorkExperienceSection 
           jobTitle='Software Engineer'
           companyName='Mad Underground'

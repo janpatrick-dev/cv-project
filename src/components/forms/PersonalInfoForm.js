@@ -67,7 +67,7 @@ class PersonalInfoForm extends Component {
             rows='5' 
             placeholder='Describe yourself...'
             defaultValue={introduction} 
-            onChange={(e) => this.handleOnChange('workProfile', e)} /> 
+            onChange={(e) => this.handleOnChange('introduction', e)} /> 
         </div>
       </section>
     );

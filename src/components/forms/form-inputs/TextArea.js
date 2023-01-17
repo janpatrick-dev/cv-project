@@ -12,13 +12,14 @@ class TextArea extends Component {
   }
 
   handleOnTextChange(e) {
+    this.props.onChange(e)
     this.setState({
       value: e.target.value
     });
   }
   
   render() {
-    const { rows, placeholder } = this.props;
+    const { rows, placeholder, defaultValue } = this.props;
 
     return (
       <textarea 
@@ -26,7 +27,7 @@ class TextArea extends Component {
         placeholder={placeholder} 
         className='textarea' 
         onChange={this.handleOnTextChange} 
-        value={this.state.value} />
+        value={defaultValue ? defaultValue : this.state.value} />
     );
   }
 }

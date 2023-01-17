@@ -7,12 +7,12 @@ class WorkProfileSection extends Component {
   }
 
   render() {
-    const { profileDescription } = this.props;
+    const { introduction } = this.props;
     return (
       <section className='section-profile'>
         <h2>Professional Profile</h2>
         <hr />
-        <p>{ profileDescription }</p>
+        <p>{ introduction }</p>
       </section>
     );
   }
