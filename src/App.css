@@ -9,6 +9,17 @@
   --color-neutral-light-grey: rgb(211, 211, 211);
 
   --color-white: #FFFFFF;
+
+  --color-green: hsl(120, 100%, 50%);
+  --color-dark-green: hsl(120, 100%, 35%);
+  --color-very-dark-green: hsl(120, 100%, 20%);
+
+  --color-red: hsl(0, 100%, 50%);
+  --color-dark-red: hsl(0, 100%, 35%);
+  --color-very-dark-red: hsl(0, 100%, 20%);
+
+  --color-blue: hsl(182, 25%, 50%);
+  --color-dark-blue: hsl(182, 25%, 35%);
 }
 
 *,
@@ -43,6 +54,9 @@ h1, h2 {
   text-transform: uppercase;
 }
 
+p {
+  white-space: pre-wrap;
+}
 
 .App {
   height: 100vh;
@@ -74,21 +88,6 @@ h1, h2 {
   flex-basis: 40%;
   padding: 20px;
   background-color: var(--color-white);
-}
-
-.section-input .load-example-btn {
-  padding: 1rem 2rem;
-  color: white;
-  background-color: var(--color-primary-light-blue);
-  border-radius: 20px;
-  cursor: pointer;
-
-  border: none;
-  outline: none;
-}
-
-.section-input .load-example-btn:hover {
-  background-color: var(--color-primary-very-light-blue);
 }
 
 .section-input .input-form {
@@ -132,7 +131,9 @@ h1, h2 {
 }
 
 .section-display .section-display-personal {
+  word-wrap: break-word;
   padding: 4rem 2rem;
+  min-width: 30%;
   max-width: 30%;
   border: 1px solid #000;
 
@@ -254,5 +255,52 @@ h1, h2 {
 .education-row .education-school-name,
 .experience-row .experience-company {
   font-weight: bold;
+}
+
+/* Buttons */
+[class*=btn] {
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.4s;
+
+  border: none;
+  outline: none;
+}
+
+.add-btn {
+  background-color: var(--color-dark-green);
+}
+
+.add-btn:hover {
+  background-color: var(--color-very-dark-green);
+}
+
+.remove-btn {
+  background-color: var(--color-dark-red);
+}
+
+.remove-btn:hover {
+  background-color: var(--color-very-dark-red);
+}
+
+.load-example-btn {
+  background-color: var(--color-blue);
+}
+
+.load-example-btn:hover {
+  background-color: var(--color-dark-blue);
+}
+
+.add-btn,
+.remove-btn,
+.load-example-btn {
+  color: white;
+}
+
+.disabled,
+.disabled:hover {
+  background-color: var(--color-neutral-grey);
+  cursor: not-allowed;
 }
 

@@ -30,8 +30,17 @@ class ContentSection extends Component {
     })
   }
   
-  setDefaultInfo = () => {
+  setExampleInfo = () => {
     this.setState(Example);
+  }
+  
+  handleOnEditExperience = (updatedExperience, index) => {
+    const experiences = [...this.state.experiences];
+    experiences[index] = updatedExperience;
+    this.setState({
+      ...this.state,
+      experiences: experiences
+    });
   }
   
   render() {
@@ -39,7 +48,8 @@ class ContentSection extends Component {
       <section className='section-content'>
         <InputSection 
           setInfo={this.setInfo} 
-          setDefaultInfo={this.setDefaultInfo} 
+          setExampleInfo={this.setExampleInfo} 
+          editExperience={this.handleOnEditExperience}
           info={this.state} />
         <DisplaySection info={this.state} />
       </section>

@@ -9,7 +9,7 @@ class WorkSection extends Component {
   }
   
   render() {
-    const { firstName, lastName, jobTitle, introduction } = this.props.info;
+    const { firstName, lastName, jobTitle, introduction, experiences } = this.props.info;
     return (
       <section className='section-display-professional'>
         <WorkHeaderSection 
@@ -18,7 +18,7 @@ class WorkSection extends Component {
           jobTitle={jobTitle} />
         <WorkProfileSection
           introduction={introduction} />
-        <WorkExperienceSection experiences={[]} />
+        <WorkExperienceSection experiences={experiences} />
       </section>
     );
   }

@@ -1,20 +1,58 @@
 import { Component } from 'react';
-import Input from './form-inputs/Input';
-import TextArea from './form-inputs/TextArea';
+import ExperienceFormInput from './form-inputs/ExperienceFormInput';
+import uniqid from 'uniqid';
+import { v4 as uuidv4 } from 'uuid';
+import ButtonComponent from '../buttons/ButtonComponent';
 
 class ExperienceForm extends Component {
+
+  constructor(props) {
+    super(props);
+  }
+
+  handleOnAddClick = () => {
+    const experiences = [...this.props.info.experiences];
+    this.props.setInfo('experiences', experiences.concat({
+      id: uuidv4(),
+      jobTitle: '',
+      jobDescription: '',
+      companyName: '',
+      startYear: '',
+      endYear: ''
+    }));
+  }
+
+  handleOnRemoveClick = () => {
+    const experiences = [...this.props.info.experiences];
+    experiences.pop();
+    this.props.setInfo('experiences', experiences);
+  }
   
   render() {
+
+    const { experiences } = this.props.info;
+
     return (
       <section className='section-input-experience'>
         <h2>Experience</h2>
-        <div className='input-container'>
-          <Input type='text' placeholder='Job Title' />
-          <Input type='text' placeholder='Company Name' />
-          <Input type='number' placeholder='Start Year' />
-          <Input type='number' placeholder='End Year' />
-          <TextArea rows='5' placeholder='Describe your work...' /> 
-        </div>
+        {experiences.map((experience, index) => {
+          return <ExperienceFormInput 
+            key={experience.id}
+            editExperience={(e) => this.props.editExperience(e, index)} 
+            experience={experience} />
+        })}
+        <ButtonComponent
+          label='Add'
+          type='button'
+          className='add-btn' 
+          onClick={this.handleOnAddClick} />
+        {experiences.length > 0 
+          ? <ButtonComponent
+              label='Remove'
+              type='button'
+              className='remove-btn' 
+              onClick={this.handleOnRemoveClick}/>
+          : null}
       </section>
     );
   }
