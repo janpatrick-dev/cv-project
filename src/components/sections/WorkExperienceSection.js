@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import Experience from '../Experience';
 
 class WorkExperienceSection extends Component {
   
@@ -7,22 +8,15 @@ class WorkExperienceSection extends Component {
   }
 
   render() {
-    const { 
-      jobTitle, 
-      companyName, 
-      startYear, 
-      endYear, 
-      jobDescription 
-    } = this.props;
-
     return (
       <section className='section-experience'>
         <h2>Experience</h2>
         <hr />
-        <div className='experience-row'>
-          <h3>{jobTitle}</h3>
-          <p>{companyName} ({startYear} - {endYear})</p>
-          <p>{jobDescription}</p>
+        <div className='section-experience-list'>
+          <Experience info={this.props} />
+          <Experience info={this.props} />
+          <Experience info={this.props} />
+          <Experience info={this.props} />
         </div>
       </section>
     );

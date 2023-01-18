@@ -12,9 +12,11 @@ class Education extends Component {
     
     return (
       <div className='education-row'>
-        <h3>{degreeTitle}</h3>
-        <p>{schoolName}</p>
-        <p>{startYear} - {endYear}</p>
+        <h3 className='education-degree-title'>{degreeTitle}</h3>
+        <div className='education-info'>
+          <p className='education-school-name'>{schoolName}</p>
+          <p className='education-school-year'>{startYear} - {endYear}</p>
+        </div>
       </div>
     );
   }

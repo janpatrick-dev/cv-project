@@ -1,6 +1,7 @@
 import { Component } from 'react';
-import PersonalInfo from '../PersonalInfo';
+import Avatar from '../Avatar';
 import EducationSection from './EducationSection';
+import PersonalInfoSection from './PersonalInfoSection';
 
 class PersonalSection extends Component {
 
@@ -9,14 +10,10 @@ class PersonalSection extends Component {
   }
 
   render() {
-    const { email, phoneNumber, urlLinkedIn, urlPortfolio } = this.props.info;
-
     return (
       <section className='section-display-personal'>
-        <PersonalInfo infoType='Email' value={email} />
-        <PersonalInfo infoType='Mobile Number' value={phoneNumber} />
-        <PersonalInfo infoType='LinkedIn' value={urlLinkedIn} />
-        <PersonalInfo infoType='Portfolio' value={urlPortfolio} />
+        <Avatar />
+        <PersonalInfoSection info={this.props.info} />
         <EducationSection />
       </section>
     );
