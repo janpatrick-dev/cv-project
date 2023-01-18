@@ -18,6 +18,7 @@ class PersonalInfoForm extends Component {
       lastName, 
       email, 
       phoneNumber,
+      urlAvatar,
       urlLinkedIn,
       urlPortfolio,
       jobTitle,
@@ -50,6 +51,16 @@ class PersonalInfoForm extends Component {
             onChange={(e) => this.handleOnChange('phoneNumber', e)} />
           <Input 
             type='text' 
+            placeholder='Job Title'
+            defaultValue={jobTitle} 
+            onChange={(e) => this.handleOnChange('jobTitle', e)} />
+          <Input 
+            type='text' 
+            placeholder='Profile Image URL'
+            defaultValue={urlAvatar} 
+            onChange={(e) => this.handleOnChange('urlAvatar', e)} />
+          <Input 
+            type='text' 
             placeholder='LinkedIn URL (optional)'
             defaultValue={urlLinkedIn} 
             onChange={(e) => this.handleOnChange('urlLinkedIn', e)}  />
@@ -58,11 +69,6 @@ class PersonalInfoForm extends Component {
             placeholder='Portfolio URL (optional)'
             defaultValue={urlPortfolio} 
             onChange={(e) => this.handleOnChange('urlPortfolio', e)} />
-          <Input 
-            type='text' 
-            placeholder='Job Title'
-            defaultValue={jobTitle} 
-            onChange={(e) => this.handleOnChange('jobTitle', e)} />
           <TextArea 
             rows='5' 
             placeholder='Describe yourself...'

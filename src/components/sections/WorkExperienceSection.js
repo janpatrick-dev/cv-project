@@ -13,10 +13,10 @@ class WorkExperienceSection extends Component {
         <h2>Experience</h2>
         <hr />
         <div className='section-experience-list'>
-          <Experience info={this.props} />
-          <Experience info={this.props} />
-          <Experience info={this.props} />
-          <Experience info={this.props} />
+          {/* <Experience />
+          <Experience />
+          <Experience />
+          <Experience /> */}
         </div>
       </section>
     );

@@ -13,7 +13,7 @@ class Experience extends Component {
       startYear, 
       endYear, 
       jobDescription 
-    } = this.props.info;
+    } = this.props;
 
     return (
       <div className='experience-row'>

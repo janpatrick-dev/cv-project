@@ -18,12 +18,7 @@ class WorkSection extends Component {
           jobTitle={jobTitle} />
         <WorkProfileSection
           introduction={introduction} />
-        <WorkExperienceSection 
-          jobTitle='Software Engineer'
-          companyName='Mad Underground'
-          startYear='2019'
-          endYear='2022'
-          jobDescription='Velit pariatur qui magna do. Veniam esse laboris Lorem adipisicing elit nulla sunt veniam in. Pariatur ullamco nostrud aliquip dolor tempor. Ea in non pariatur nulla aliqua tempor est aute ea amet aliqua sunt irure velit. Nostrud sit quis labore minim excepteur in ullamco ea magna est culpa do.' />
+        <WorkExperienceSection experiences={[]} />
       </section>
     );
   }

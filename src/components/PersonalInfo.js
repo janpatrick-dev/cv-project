@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import Icon from '@mui/material/Icon';
 
 class PersonalInfo extends Component {
 
@@ -7,11 +8,14 @@ class PersonalInfo extends Component {
   }
 
   render() {
-    const { infoType, value } = this.props;
+    const { icon, infoType, value } = this.props;
 
     return (
       <div className='personal-info-row'>
-        <p>{ infoType }</p>
+        <p className='info-label'>
+          <Icon className='info-icon'>{icon}</Icon>
+          { infoType }
+        </p>
         <p>{ value }</p> 
       </div>     
     );

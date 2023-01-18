@@ -11,10 +11,10 @@ class PersonalInfoSection extends Component {
     const { email, phoneNumber, urlLinkedIn, urlPortfolio } = this.props.info;
     return (
       <section className='section-personal-info'>
-        <PersonalInfo infoType='Email' value={email} />
-        <PersonalInfo infoType='Mobile Number' value={phoneNumber} />
-        <PersonalInfo infoType='LinkedIn' value={urlLinkedIn} />
-        <PersonalInfo infoType='Portfolio' value={urlPortfolio} />
+        <PersonalInfo icon='email' infoType='Email' value={email} />
+        <PersonalInfo icon='call' infoType='Mobile Number' value={phoneNumber} />
+        <PersonalInfo icon='groups' infoType='LinkedIn' value={urlLinkedIn} />
+        <PersonalInfo icon='public' infoType='Portfolio' value={urlPortfolio} />
       </section>
     );
   }

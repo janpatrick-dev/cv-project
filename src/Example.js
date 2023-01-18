@@ -5,6 +5,7 @@ const Example = {
   phoneNumber: '+639178881234',
   jobTitle: 'Software Engineer',
   introduction: 'Proident sint consequat mollit cupidatat do occaecat. Nulla proident irure ea amet ex Lorem. Pariatur ullamco voluptate cupidatat esse ipsum et. Non dolor occaecat exercitation Lorem id fugiat officia in Lorem eu eiusmod ipsum anim. Ad anim cillum incididunt pariatur veniam eiusmod qui mollit exercitation irure laborum.',
+  urlAvatar: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   urlLinkedIn: 'https://linkedin.com/in/johndoe123',
   urlPortfolio: 'https://www.johndoe.com',
   experiences: [

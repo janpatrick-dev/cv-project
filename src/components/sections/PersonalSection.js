@@ -12,7 +12,7 @@ class PersonalSection extends Component {
   render() {
     return (
       <section className='section-display-personal'>
-        <Avatar />
+        <Avatar imgSrc={this.props.info.urlAvatar} />
         <PersonalInfoSection info={this.props.info} />
         <EducationSection />
       </section>
