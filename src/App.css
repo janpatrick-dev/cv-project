@@ -257,6 +257,21 @@ p {
   font-weight: bold;
 }
 
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.form-container div {
+  padding: 10px;
+  border: 1px solid var(--color-primary-dark-blue);
+}
+
+.form-container div:last-child::after {
+  border: none;
+}
+
 /* Buttons */
 [class*=btn] {
   padding: 1rem 2rem;

@@ -14,7 +14,7 @@ class PersonalSection extends Component {
       <section className='section-display-personal'>
         <Avatar imgSrc={this.props.info.urlAvatar} />
         <PersonalInfoSection info={this.props.info} />
-        <EducationSection />
+        <EducationSection educations={this.props.info.educations} />
       </section>
     );
   }

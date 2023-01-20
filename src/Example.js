@@ -38,18 +38,21 @@ const Example = {
   ],
   educations: [
     {
+      id: uuidv4(),
       degreeTitle: 'Master of Science in Computer Science',
       schoolName: 'University of Example',
       startYear: 2021,
       endYear: 2022,
     },        
     {
+      id: uuidv4(),
       degreeTitle: 'Bachelor of Science in Information Technology',
       schoolName: 'University of Example',
       startYear: 2015,
       endYear: 2021,
     },
     {
+      id: uuidv4(),
       degreeTitle: 'High School',
       schoolName: 'Example High School',
       startYear: 2011,

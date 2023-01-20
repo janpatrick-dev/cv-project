@@ -35,7 +35,10 @@ class InputSection extends Component {
             setInfo={this.setInfo} 
             info={this.props.info}
             editExperience={this.props.editExperience} />
-          <EducationForm />
+          <EducationForm
+            setInfo={this.setInfo} 
+            info={this.props.info}
+            editEducation={this.props.editEducation} />
         </form>
       </section>  
     );

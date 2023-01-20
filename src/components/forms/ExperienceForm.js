@@ -35,12 +35,14 @@ class ExperienceForm extends Component {
     return (
       <section className='section-input-experience'>
         <h2>Experience</h2>
-        {experiences.map((experience, index) => {
-          return <ExperienceFormInput 
-            key={experience.id}
-            editExperience={(e) => this.props.editExperience(e, index)} 
-            experience={experience} />
-        })}
+        <div className='form-container'>
+          {experiences.map((experience, index) => {
+            return <ExperienceFormInput 
+              key={experience.id}
+              editExperience={(e) => this.props.editExperience(e, index)} 
+              experience={experience} />
+          })}
+        </div>
         <ButtonComponent
           label='Add'
           type='button'

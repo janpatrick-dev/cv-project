@@ -42,6 +42,15 @@ class ContentSection extends Component {
       experiences: experiences
     });
   }
+
+  handleOnEditEducation = (updatedEducation, index) => {
+    const educations = [...this.state.educations];
+    educations[index] = updatedEducation;
+    this.setState({
+      ...this.state,
+      educations: educations
+    });
+  }
   
   render() {
     return (
@@ -50,6 +59,7 @@ class ContentSection extends Component {
           setInfo={this.setInfo} 
           setExampleInfo={this.setExampleInfo} 
           editExperience={this.handleOnEditExperience}
+          editEducation={this.handleOnEditEducation}
           info={this.state} />
         <DisplaySection info={this.state} />
       </section>

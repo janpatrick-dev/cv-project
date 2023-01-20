@@ -8,7 +8,7 @@ class Education extends Component {
   }
 
   render() {
-    const { degreeTitle, schoolName, startYear, endYear } = this.props;
+    const { degreeTitle, schoolName, startYear, endYear } = this.props.education;
     
     return (
       <div className='education-row'>
