@@ -2,7 +2,7 @@ import HeaderSection from "./components/sections/HeaderSection";
 import ContentSection from "./components/sections/ContentSection";
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <HeaderSection />

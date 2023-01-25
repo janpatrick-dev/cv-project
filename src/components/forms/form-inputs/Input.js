@@ -1,33 +1,22 @@
-import { Component } from 'react';
+import { useState } from "react";
 
-class Input extends Component {
+const Input = (props) => {
+  const { type, placeholder, defaultValue, onChange } = props;
+  const [value, setValue] = useState('');
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: ''
-    };
+  const handleOnTextChange = (e) => {
+    onChange(e);
+    setValue(e.target.value);
   }
 
-  handleOnTextChange = (e) => {
-    this.props.onChange(e);
-    this.setState({
-      value: e.target.value
-    });
-  }
-
-  render() {
-    const { type, placeholder, defaultValue } = this.props;
-
-    return (
-      <input 
-        type={type} 
-        placeholder={placeholder} 
-        onChange={this.handleOnTextChange}
-        value={defaultValue ? defaultValue : this.state.value} 
-        className='input' />
-    );
-  }
+  return (
+    <input 
+      type={type} 
+      placeholder={placeholder} 
+      onChange={handleOnTextChange}
+      value={defaultValue ? defaultValue : value} 
+      className='input' />
+  );
 }
 
 export default Input;

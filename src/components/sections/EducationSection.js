@@ -2,12 +2,12 @@ import { Component } from 'react';
 import Education from '../Education';
 import uniqid from 'uniqid';
 
-class EducationSection extends Component {
+const EducationSection = (props) => {
+
+  const { educations } = props;
   
-  render() {
-    const educations = this.props.educations;
-    return (
-      <section className='section-display-personal-education'>
+  return (
+    <section className='section-display-personal-education'>
         <h2>Education</h2>
         <hr />
         <div className='education-list'>
@@ -15,9 +15,8 @@ class EducationSection extends Component {
             return <Education key={uniqid()} education={education} />
           })}
         </div>
-      </section>
-    );
-  }
+    </section>
+  );
 }
 
 export default EducationSection;

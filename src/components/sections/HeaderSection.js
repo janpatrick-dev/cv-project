@@ -1,15 +1,10 @@
-import { Component } from 'react';
-
-class HeaderSection extends Component {
+const HeaderSection = () => {
     
-  render() {
-
-    return (
-      <header className='section-header'>
-        CV Maker
-      </header>
-    );
-  }
+  return (
+    <header className='section-header'>
+      CV Maker
+    </header>
+  );
 }
 
 export default HeaderSection;

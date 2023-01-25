@@ -1,27 +1,21 @@
-import { Component } from 'react';
 import WorkHeaderSection from './WorkHeaderSection';
 import WorkExperienceSection from './WorkExperienceSection';
 import WorkProfileSection from './WorkProfileSection';
 
-class WorkSection extends Component {
-  constructor(props) {
-    super(props);
-  }
-  
-  render() {
-    const { firstName, lastName, jobTitle, introduction, experiences } = this.props.info;
-    return (
-      <section className='section-display-professional'>
-        <WorkHeaderSection 
-          firstName={firstName}
-          lastName={lastName} 
-          jobTitle={jobTitle} />
-        <WorkProfileSection
-          introduction={introduction} />
-        <WorkExperienceSection experiences={experiences} />
-      </section>
-    );
-  }
+const WorkSection = (props) => {
+  const { firstName, lastName, jobTitle, introduction, experiences } = props.info;
+
+  return (
+    <section className='section-display-professional'>
+      <WorkHeaderSection 
+        firstName={firstName}
+        lastName={lastName} 
+        jobTitle={jobTitle} />
+      <WorkProfileSection
+        introduction={introduction} />
+      <WorkExperienceSection experiences={experiences} />
+    </section>
+  );
 }
 
 export default WorkSection;

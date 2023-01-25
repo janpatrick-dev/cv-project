@@ -1,35 +1,22 @@
-import { Component } from 'react';
+import { useState } from 'react';
 
-class TextArea extends Component {
-  
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: ''
-    };
+const TextArea = (props) => {
+  const { rows, placeholder, defaultValue, onChange } = props;
+  const [value, setValue] = useState('');
 
-    this.handleOnTextChange = this.handleOnTextChange.bind(this);
+  const handleOnTextChange = (e) => {
+    onChange(e);
+    setValue(e.target.value);
   }
 
-  handleOnTextChange(e) {
-    this.props.onChange(e)
-    this.setState({
-      value: e.target.value
-    });
-  }
-  
-  render() {
-    const { rows, placeholder, defaultValue } = this.props;
-
-    return (
-      <textarea 
-        rows={rows} 
-        placeholder={placeholder} 
-        className='textarea' 
-        onChange={this.handleOnTextChange} 
-        value={defaultValue ? defaultValue : this.state.value} />
-    );
-  }
+  return (
+    <textarea 
+      rows={rows} 
+      placeholder={placeholder} 
+      className='textarea' 
+      onChange={handleOnTextChange} 
+      value={defaultValue ? defaultValue : value} />
+  );
 }
 
 export default TextArea;

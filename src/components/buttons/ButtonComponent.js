@@ -1,23 +1,15 @@
-import { Component } from 'react';
+const ButtonComponent = (props) => {
+  const { label, type, className, onClick } = props;
 
-class ButtonComponent extends Component {
-  
-  constructor(props) {
-    super(props);
-  }
-
-  onClick = () => {
-    const { onClick } = this.props;
-    
+  const onClickEvent = () => {
     if (onClick) {
       onClick();
     }
   }
 
-  render() {
-    const { label, type, className } = this.props;
-    return <button className={className} type={type} onClick={this.onClick}>{label}</button>;
-  }
+  return (
+    <button className={className} type={type} onClick={onClickEvent}>{label}</button>
+  );
 }
 
 export default ButtonComponent;

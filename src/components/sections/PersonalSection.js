@@ -1,24 +1,18 @@
-import { Component } from 'react';
 import Avatar from '../Avatar';
 import EducationSection from './EducationSection';
 import PersonalInfoSection from './PersonalInfoSection';
 
-class PersonalSection extends Component {
+const PersonalSection = (props) => {
+  const { info } = props;
+  const { urlAvatar, educations } = info;
 
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
     return (
       <section className='section-display-personal'>
-        <Avatar imgSrc={this.props.info.urlAvatar} />
-        <PersonalInfoSection info={this.props.info} />
-        <EducationSection educations={this.props.info.educations} />
+        <Avatar imgSrc={urlAvatar} />
+        <PersonalInfoSection info={info} />
+        <EducationSection educations={educations} />
       </section>
     );
-  }
-
 }
 
 export default PersonalSection;

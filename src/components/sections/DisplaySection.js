@@ -1,21 +1,15 @@
-import { Component } from 'react';
 import PersonalSection from './PersonalSection';
 import WorkSection from './WorkSection';
 
-class DisplaySection extends Component {
+const DisplaySection = (props) => {
+  const { info } = props;
 
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <section className='section-display'>
-        <PersonalSection info={this.props.info} />
-        <WorkSection info={this.props.info}  />
-      </section>  
-    );
-  }
+  return (
+    <section className='section-display'>
+      <PersonalSection info={info} />
+      <WorkSection info={info}  />
+    </section>  
+  );
 }
 
 export default DisplaySection;
